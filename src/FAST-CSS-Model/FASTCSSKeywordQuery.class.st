@@ -9,8 +9,8 @@ Class {
 { #category : 'meta' }
 FASTCSSKeywordQuery class >> annotation [
 
+	<ignoreForCoverage>
 	<FMClass: #KeywordQuery super: #FASTCSSEntity>
 	<package: #'FAST-CSS-Model'>
 	<generated>
-	^ self
 ]

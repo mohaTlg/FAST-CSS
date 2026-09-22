@@ -2,6 +2,11 @@
 ## Relations
 ======================
 
+### Children
+| Relation | Origin | Opposite | Type | Comment |
+|---|
+| `childrenNodes` | `FASTCSSStylesheet` | `stylesheetOwner` | `FASTCSSEntity` | |
+
 ### Other
 | Relation | Origin | Opposite | Type | Comment |
 |---|
@@ -21,6 +26,9 @@ Class {
 	#superclass : 'FASTCSSEntity',
 	#traits : 'FamixTHasImmediateSource',
 	#classTraits : 'FamixTHasImmediateSource classTrait',
+	#instVars : [
+		'#childrenNodes => FMMany type: #FASTCSSEntity opposite: #stylesheetOwner'
+	],
 	#category : 'FAST-CSS-Model-Entities',
 	#package : 'FAST-CSS-Model',
 	#tag : 'Entities'
@@ -29,8 +37,34 @@ Class {
 { #category : 'meta' }
 FASTCSSStylesheet class >> annotation [
 
+	<ignoreForCoverage>
 	<FMClass: #Stylesheet super: #FASTCSSEntity>
 	<package: #'FAST-CSS-Model'>
 	<generated>
-	^ self
+]
+
+{ #category : 'adding' }
+FASTCSSStylesheet >> addChildrenNode: anObject [
+
+	<ignoreForCoverage>
+	<generated>
+	^ self childrenNodes add: anObject
+]
+
+{ #category : 'accessing' }
+FASTCSSStylesheet >> childrenNodes [
+	"Relation named: #childrenNodes type: #FASTCSSEntity opposite: #stylesheetOwner"
+
+	<ignoreForCoverage>
+	<generated>
+	<derived>
+	^ childrenNodes
+]
+
+{ #category : 'accessing' }
+FASTCSSStylesheet >> childrenNodes: anObject [
+
+	<ignoreForCoverage>
+	<generated>
+	childrenNodes value: anObject
 ]

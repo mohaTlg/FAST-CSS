@@ -9,8 +9,8 @@ Class {
 { #category : 'meta' }
 FASTCSSFunctionName class >> annotation [
 
+	<ignoreForCoverage>
 	<FMClass: #FunctionName super: #FASTCSSEntity>
 	<package: #'FAST-CSS-Model'>
 	<generated>
-	^ self
 ]

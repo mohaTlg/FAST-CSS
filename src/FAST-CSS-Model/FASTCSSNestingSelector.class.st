@@ -9,8 +9,8 @@ Class {
 { #category : 'meta' }
 FASTCSSNestingSelector class >> annotation [
 
+	<ignoreForCoverage>
 	<FMClass: #NestingSelector super: #FASTCSSEntity>
 	<package: #'FAST-CSS-Model'>
 	<generated>
-	^ self
 ]

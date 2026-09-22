@@ -29,8 +29,8 @@ Class {
 { #category : 'meta' }
 FASTCSSERROR class >> annotation [
 
+	<ignoreForCoverage>
 	<FMClass: #ERROR super: #FASTCSSEntity>
 	<package: #'FAST-CSS-Model'>
 	<generated>
-	^ self
 ]
